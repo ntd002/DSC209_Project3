@@ -270,7 +270,7 @@
     <p>
         All projects where I'm given free reign, I focus on whatever I'm interested in. 
         This makes projects more fun and so I put in a little more effort. 
-        In this case, I've been playing a lot of <a href="https://pokerogue.net" target="_blank">PokéRogue</a>, a rogue-like Pokemon fan game you can play in your browser. 
+        In this case, I've been playing a lot of <a href="https://pokerogue.net" target="_blank">PokéRogue</a>, a rogue-like Pokémon fan game you can play in your browser. 
         I tried using this dataset during my undergrad, but I had trouble utilizing APIs. Now is not that time.
     </p>
     <p>
@@ -283,7 +283,7 @@
         The first deviation from the original was API usage. I had to learn how to make API requests from <a href="https://pokeapi.co" target="_blank">PokéAPI</a> which was simple.
         The issue I faced in the past was this. Grabbing all of the Pokémon does not give you their stats. 
         It gives you their name and a link to make another API request for their stats. So what did I do? 
-        A caveman approach of for loops making API requests for over 1,000 Pokémon. I could just save it to a csv and upload it. 
+        A caveman approach of for loops making API requests for over 1,000 Pokémon. This does make the website loading slower as a tradeoff. I could just save it to a csv and upload it. 
         But I left it as is since the point of an API is getting data when it updates.
     </p>
     <p>
@@ -293,17 +293,17 @@
         Eventually I settled on the question, "As more Pokémon were released, did the average Base Stat Total increase?" 
         A simple question at first, but I play competitive. Every generation of Pokémon release new ones that outclass older generations. 
         Articuno, a mythical Pokémon from Generation 1, is completely unused in high tiers of play. There are multiple reasons for this. 
-        Newer Pokémon can have better base stat totals, move sets, base stat spreads, or some other gimmick. Base stat totals is more objective to calculate so I went with that.
+        Newer Pokémon can have better base stat totals, move sets, base stat spreads, or some other gimmick. Base stat totals are more objective to calculate so I went with that.
     </p>
     <p>
-        So I followed the lecture and made a scatterplot, added some axis titles, and then some more features. First was the sprites. 
+        So I followed the lecture and made a scatterplot, added some axis titles, and then some more features. First were the sprites. 
         The APIs actually link to a GitHub hosting the sprites so using my fetching know-how, I grabbed those. 
         Next I wanted a filter types feature which was a little tricky to figure out. 
         When you select a type, all the circles are deleted and then all data containing that type is put into a filtered array which then redraws the circles.
     </p>
     <p>
         By this point we had the discussion section. They gave me suggestions like using the types for colors since the gradient I had originally served zero purpose. 
-        They also encouraged me not to use the bisect and instead find the closest circle to the cursor. This was tough and alot of ChatGPT was used, but I actually came up with my own solution. 
+        They also encouraged me not to use the bisect and instead find the closest circle to the cursor. This was tough and a lot of ChatGPT was used, but I actually came up with my own solution. 
         A separate array of coordinates of circles is made alongside the filtered data, and so you find the index of the coordinates closest to your mouse. 
         Then use that to find the data you want.
     </p>
@@ -316,7 +316,7 @@
     <p>
         A huge bug I encountered was that when filtering for a type, it would jump between Pokémon circles and skip over some. 
         This took a while but I found out the html elements for creating the initial circles and position data array went off every type change. 
-        Making it so there was position data for circles that weren't there. I made a boolean to only allow it to fire at the start and that solved it.
+        Making it so there was position data for circles that weren't there. I made a Boolean to only allow it to fire at the start and that solved it.
     </p>
     <p>
         Lastly were the fonts. The title is obviously inspired by the Pokémon logo. The text was meant to be like the GBA Pokémon text I grew up with. 
@@ -325,7 +325,8 @@
     <p>
         Overall it was fun to create a site that I wanted to do, though it did come at the same time as the midterm in DSC 256. 
         If I had more time, I would work on getting those fonts figured out. Add some color, patterns, or even images to the background. 
-        Definitey color the title to be like the Pokémon logo more. Maybe implement a click function so you can compare Pokémon. 
+        Definitely color the title to be like the Pokémon logo more. Maybe implement a click function so you can compare Pokémon. 
+        I could use a csv next time around or have a loading icon. 
         However, I am satisfied with and proud of this product.
 
     </p>
